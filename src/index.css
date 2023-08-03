@@ -1,27 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --font-sm: 0.8rem;
+  --font-md: 1rem;
+  --font-lg: 1.2rem;
+  --font-xl: 1.8rem;
+  --font-2xl: 2.2rem;
+  --font-black: rgb(21, 20, 20);
+  --font-gray: rgb(63, 58, 58);
+  --font-white: rgb(250, 247, 247);
+  --font-wt-light: 300;
+  --font-wt-normal: 400;
+  --font-wt-semibold: 500;
+  --font-wt-bold: 600;
+
+  --color-primary: #081421;
+  --color-gray: rgb(245, 245, 245);
+  --color-bg: rgb(240, 240, 240);
+
+  --container-lg: 75%;
+  --container-md: 85%;
+  --container-sm: 90%;
+
+  --transition: all 400ms ease;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .btn {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  font-size: var(--font-sm);
+  font-weight: var(--font-wt-semibold);
+  transition: var(--transition);
 }
 
-.btn:hover {
-  border-color: #646cff;
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--font-white);
 }
 
-.btn:focus,
-.btn:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: inherit;
+  color: var(--font-black);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-transparent {
+  background-color: inherit;
+  color: var(--font-black);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-transparent:hover,
+.btn:focus {
+  background-color: var(--color-primary);
+  color: var(--font-white);
+  border: none;
+}
+
+.container {
+  width: var(--container-sm);
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 612px) {
+  .container {
+    width: var(--container-md);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: var(--container-lg);
+  }
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
