@@ -1,0 +1,36 @@
+.testimonial-item {
+  position: relative;
+  gap: 1rem;
+  max-width: 18rem;
+  margin-inline: auto;
+  padding: 1rem;
+  background-color: var(--color-gray);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  transition: var(--transition);
+}
+
+.image {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.user-details {
+  gap: 0.2rem;
+}
+
+.name {
+  font-weight: var(--font-wt-bold);
+}
+
+.position {
+  font-weight: var(--font-wt-semibold);
+}
+
+.position,
+.testimonial-item p {
+  font-size: var(--font-sm);
+  color: var(--font-gray);
+}
