@@ -15,7 +15,7 @@
   --font-xl: 1.8rem;
   --font-2xl: 2.2rem;
   --font-black: rgb(21, 20, 20);
-  --font-gray: rgb(63, 58, 58);
+  --font-gray: rgb(128, 120, 120);
   --font-white: rgb(250, 247, 247);
   --font-wt-light: 300;
   --font-wt-normal: 400;
@@ -23,7 +23,7 @@
   --font-wt-bold: 600;
 
   --color-primary: #081421;
-  --color-gray: rgb(245, 245, 245);
+  --color-gray: rgb(252, 252, 252);
   --color-bg: rgb(240, 240, 240);
 
   --container-lg: 75%;
@@ -87,6 +87,10 @@ html {
   .container {
     width: var(--container-lg);
   }
+}
+
+main {
+  padding-top: 5rem;
 }
 
 .flex-col {

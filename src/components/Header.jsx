@@ -1,21 +1,21 @@
-// import React from "react";
+import classes from "./Header.module.css";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <section>
-      <Link to="/">Logo</Link>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/post-job">Post a Job</Link>
-          </li>
-        </ul>
+    <header className={classes["header-container"]}>
+      <div className={classes["logo-container"]}>
+        <Link to='/'>Jobify</Link>
+      </div>
+      <nav className={classes.cta}>
+        <Link to='/' className='btn btn-transparent'>
+          Home
+        </Link>
+        <Link to='post-job' className='btn btn-primary'>
+          Post a Job
+        </Link>
       </nav>
-    </section>
+    </header>
   );
 };
 

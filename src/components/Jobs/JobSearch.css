@@ -1,9 +1,9 @@
 /* Styling for the container div */
 .div {
   display: flex;
-  justify-content: center;
+  margin-block: 1rem;
+  gap: 1rem;
   align-items: center;
-  margin: 14px;
 }
 
 input[type="text"] {
