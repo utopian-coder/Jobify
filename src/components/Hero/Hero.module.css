@@ -4,8 +4,7 @@
 }
 
 .intro p {
-  font-size: var(--font-sm);
-  color: var(--font-gray);
+  color: #8ca2c0;
   line-height: 1.5;
   margin-block: 2rem 2.5rem;
 }

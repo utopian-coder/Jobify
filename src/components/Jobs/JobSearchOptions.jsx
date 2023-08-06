@@ -11,8 +11,8 @@ const JobSearchOptions = ({
   };
 
   return (
-    <div className='div'>
-      <div className='search-bar'>
+    <div className="div">
+      <div className="search-bar">
         <input
           type='text'
           placeholder='Search'
@@ -58,12 +58,12 @@ const CountryFilter = ({ onSelectCountry }) => {
         onChange={handleCountryChange}
         placeholder='Country'
       >
-        <option value='any-country'>Country</option>
-        <option value='United States'>USA</option>
-        <option value='Behrian'>Behrian</option>
-        <option value='Pakistan'>Pakistan</option>
-        <option value='Canada'>Canada</option>
-        <option value='India'>India</option>
+        <option value="any-country">Country</option>
+        <option value="United States">USA</option>
+        <option value="Behrian">Bahrian</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="Canada">Canada</option>
+        <option value="India">India</option>
       </select>
     </div>
   );
