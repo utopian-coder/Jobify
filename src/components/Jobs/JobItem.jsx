@@ -53,7 +53,7 @@ const JobItem = ({ jobDetails }) => {
       </details>
       <hr />
       <div className="job-info">
-        <div className="job-title">{jobDetails.title}</div>
+        <div className="job-title">{jobDetails.positionTitle}</div>
 
         <div className="job-location">📍 {jobDetails.location}</div>
         <div className="job-pay">💲{jobDetails.pay} month</div>

@@ -14,13 +14,13 @@ const Footer = () => {
         </q>
       </div>
       <div className={classes["social-links"]}>
-        <a href='#'>
+        <a href="#">
           <AiOutlineTwitter className={classes["social-link"]} />
         </a>
-        <a href='#'>
+        <a href="#">
           <BiLogoFacebook className={classes["social-link"]} />
         </a>
-        <a href='#'>
+        <a href="#">
           <BiLogoLinkedin className={classes["social-link"]} />
         </a>
       </div>

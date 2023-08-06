@@ -8,6 +8,7 @@ Hook to insert a job post into the jobs table by taking an object as a paramater
 
 async function createJob(job) {
   const { data, error } = await supabase.from("jobs").insert([job]).select();
+  console.log(data)
   return { data, error };
 }
 
