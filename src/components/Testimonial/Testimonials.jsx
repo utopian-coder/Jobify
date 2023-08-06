@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import classes from "./Testimonials.module.css";
 import TestimonialItem from "./TestimonialItem";
+
 const TESTIMONIALS = [
   {
     profileImage:
@@ -25,13 +26,6 @@ const TESTIMONIALS = [
     position: "UX/UI Designer",
     testimonial:
       "Imran Biswas has been an invaluable member of our UX/UI Design team. and user-friendly interfaces. Imran's attention to detail and user-centric approach set him apart as a designer. It's been a pleasure working with him, and I highly recommend Imran for any design projects.",
-  },
-  {
-    profileImage: UserImage,
-    name: "Imran Biswas",
-    position: "Fullstack Development",
-    testimonial:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error nihil architecto iure accusamus non commodi eveniet, illum repudiandae odio?",
   },
 ];
 

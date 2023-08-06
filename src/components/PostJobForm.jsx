@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import createJob from "../hooks/createJob";
 import { useState } from "react";
-import useImageStorage from "../hooks/useImageStorage";
 
 const PostJobForm = () => {
   const [formData, setFormData] = useState({
@@ -11,21 +10,8 @@ const PostJobForm = () => {
     pay: "",
     description: "",
     type: "",
-    logo: null,
+    logo: "",
   });
-  const { imageURL, uploadImage } = useImageStorage();
-
-  const handleSubmitPicture = async (file) => {
-    try {
-      await uploadImage(file);
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        logo: file,
-      }));
-    } catch (error) {
-      console.error("Error uploading image:", error);
-    }
-  };
 
   const handleChange = (event) => {
     const { id, value } = event.target;
@@ -45,11 +31,12 @@ const PostJobForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
-      const { data, error } = await createJob(formData);
+
+      const { data, error } = await createJob(formData, event.target.logo.files[0]);
 
       if (data) {
-        console.log("Job created:", data);
         setFormData({
           name: "",
           location: "",
@@ -194,9 +181,10 @@ const PostJobForm = () => {
               style={{ width: "390px" }}
               type="file"
               className="form-file-input"
-              id="image"
-              name="image"
-              onChange={(event) => handleSubmitPicture(event.target.files[0])}
+              id="logo"
+              name="logo"
+              value={formData.logo}
+              onChange={handleChange}
             />
             <label className="form-file-label" htmlFor="image">
               <span className="form-file-text custom-file-label">
