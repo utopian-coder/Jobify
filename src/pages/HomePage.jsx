@@ -1,6 +1,8 @@
 import Testimonials from "../components/Testimonial/Testimonials";
 import Jobs from "../components/Jobs/Jobs";
-const demoJobs = [
+import Hero from "../components/Hero/Hero";
+
+const DEMO_JOBS = [
   {
     id: 1,
     logo: "https://is4-ssl.mzstatic.com/image/thumb/Purple111/v4/05/86/61/0586618f-8209-cb9c-abea-0caff7660d89/source/512x512bb.jpg",
@@ -62,11 +64,13 @@ const demoJobs = [
     datePosted: new Date(new Date().getTime() - 40 * 24 * 60 * 60 * 1000),
   },
 ];
+
 const HomePage = () => {
   return (
     <main className={`container`}>
+      <Hero />
       <Testimonials />
-      <Jobs demoJobs={demoJobs} />
+      <Jobs demoJobs={DEMO_JOBS} />
     </main>
   );
 };
