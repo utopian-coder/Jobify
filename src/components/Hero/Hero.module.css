@@ -1,0 +1,21 @@
+.intro-cta {
+  display: flex;
+  gap: 1rem;
+}
+
+.intro p {
+  font-size: var(--font-sm);
+  color: var(--font-gray);
+  line-height: 1.5;
+  margin-block: 2rem 2.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 5%;
+    align-items: center;
+    padding: 5rem 0;
+  }
+}
