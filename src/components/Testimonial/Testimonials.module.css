@@ -1,6 +1,7 @@
 .testimonials {
   gap: 1rem;
   margin-top: 2rem;
+  justify-content: space-between;
 }
 
 .testimonials h2 {

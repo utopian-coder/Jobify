@@ -25,6 +25,13 @@ const TESTIMONIALS = [
     testimonial:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error nihil architecto iure accusamus non commodi eveniet, illum repudiandae odio?",
   },
+  {
+    profileImage: UserImage,
+    name: "Imran Biswas",
+    position: "Fullstack Development",
+    testimonial:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa error nihil architecto iure accusamus non commodi eveniet, illum repudiandae odio?",
+  },
 ];
 
 const Testimonials = () => {

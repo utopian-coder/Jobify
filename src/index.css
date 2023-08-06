@@ -97,3 +97,9 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
