@@ -7,7 +7,7 @@ const TestimonialItem = ({ testimonialDetails }) => {
     <article className={`flex-col ${classes["testimonial-item"]}`}>
       <img
         src={profileImage}
-        alt='Users profile image.'
+        alt="Users profile image."
         className={classes.image}
       />
 

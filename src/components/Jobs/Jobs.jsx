@@ -1,12 +1,16 @@
 import { useState } from "react";
 import JobSearchOptions from "./JobSearchOptions";
 import JobItem from "./JobItem";
+import useGetJobs from "../../hooks/useGetJobs";
 
-const Jobs = ({ demoJobs }) => {
+const Jobs = () => {
+  const jobsData = useGetJobs();
+
   const [selectedDate, setSelectedDate] = useState("any-date");
   const [selectedCountry, setSelectedCountry] = useState("any-country");
   const [jobType, setJobType] = useState("any-time");
   const [searchInput, setSearchInput] = useState("");
+
   const filterJobsByDate = (jobs) => {
     const currentDate = new Date();
 
@@ -54,14 +58,21 @@ const Jobs = ({ demoJobs }) => {
       return jobs.filter((job) => job.type === jobType);
     }
   };
-  const filteredByDate = filterJobsByDate(demoJobs);
+  const filteredByDate = filterJobsByDate(jobsData);
   const filteredByCountry = filterJobsByCountry(filteredByDate);
   const filteredByJobTitle = filterJobsByTitle(filteredByCountry);
   const filteredAndSorted = filterJobsByType(filteredByJobTitle);
 
+  const headingStyle = {
+    fontSize: "3rem",
+    fontWeight: "bold",
+    color: "#486284",
+    marginBottom: "3rem",
+    marginTop: "3rem",
+  };
   return (
     <section>
-      <h2>Recent Jobs</h2>
+      <h2 style={headingStyle}>Recent Jobs</h2>
       <JobSearchOptions
         onSelectDate={setSelectedDate}
         onSelectCountry={setSelectedCountry}

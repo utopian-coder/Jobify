@@ -11,6 +11,7 @@
   .testimonials {
     flex-direction: row !important;
     padding-bottom: 2rem;
+
     border-bottom: 2px solid var(--color-gray);
     margin-top: 1.5rem;
   }
