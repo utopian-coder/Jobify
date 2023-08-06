@@ -4,14 +4,15 @@
   margin-block: 1rem;
   gap: 1rem;
   align-items: center;
+  margin: 9px;
 }
 
 input[type="text"] {
-  width: 500px;
+  width: 600px;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 12px;
   outline: none;
 }
 
@@ -19,7 +20,7 @@ select {
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 1rem;
   outline: none;
 }
 
@@ -31,7 +32,7 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
@@ -42,4 +43,15 @@ button:hover {
 }
 #date-filter {
   width: 100px;
+}
+
+@media screen and (max-width: 612px) {
+  .div {
+    flex-wrap: wrap;
+    overflow-x: hidden;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
 }

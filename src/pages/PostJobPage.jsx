@@ -1,7 +1,11 @@
 import PostJobForm from "../components/PostJobForm";
 
 const PostJobPage = () => {
-  return <PostJobForm />;
+  return (
+    <main>
+      <PostJobForm />
+    </main>
+  );
 };
 
 export default PostJobPage;

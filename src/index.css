@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +6,10 @@
   text-decoration: none;
   border: none;
   outline: none;
+  font-family: Titillium Web, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-sm: 0.8rem;
   --font-md: 1rem;
   --font-lg: 1.2rem;
@@ -40,34 +41,29 @@ html {
 .btn {
   cursor: pointer;
   width: fit-content;
-  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.4rem;
   border-radius: 1.5rem;
-  font-size: var(--font-sm);
   font-weight: var(--font-wt-semibold);
   transition: var(--transition);
 }
 
-.btn-primary {
-  background-color: var(--color-primary);
-  color: var(--font-white);
-}
-
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: inherit;
-  color: var(--font-black);
+  color: var(--font-white);
+  background-color: rgba(59, 59, 59, 0.932);
+
   border: 1px solid var(--color-primary);
 }
-
-.btn-transparent {
+.btn-primary {
   background-color: inherit;
   color: var(--font-black);
-  border: 1px solid var(--color-primary);
+  border: 1px solid #7b95b7;
 }
 
 .btn-transparent:hover,
 .btn:focus {
-  background-color: var(--color-primary);
+  background-color: rgba(59, 59, 59, 0.932);
   color: var(--font-white);
   border: none;
 }
@@ -96,4 +92,22 @@ main {
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.One {
+  color: rgba(255, 255, 255, 0.897);
+  border: none;
+}
+.One:hover {
+  color: black;
+}
+.Jobify-logo {
+  width: 140px;
+  margin-left: 1rem;
 }

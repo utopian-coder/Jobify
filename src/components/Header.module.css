@@ -14,6 +14,7 @@
 
 .logo-container a {
   color: var(--color-primary);
+  text-decoration: none;
 }
 
 .logo-container {
@@ -41,5 +42,12 @@
   }
   .logo-container {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .header-container {
+    width: 75%;
+    left: calc(12.5%);
   }
 }
