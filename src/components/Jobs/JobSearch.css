@@ -1,7 +1,8 @@
 /* Styling for the container div */
 .div {
   display: flex;
-  justify-content: center;
+  margin-block: 1rem;
+  gap: 1rem;
   align-items: center;
   margin: 9px;
 }
@@ -42,4 +43,15 @@ button:hover {
 }
 #date-filter {
   width: 100px;
+}
+
+@media screen and (max-width: 612px) {
+  .div {
+    flex-wrap: wrap;
+    overflow-x: hidden;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
 }

@@ -64,6 +64,7 @@ import Hero from "../components/Hero/Hero";
 //     datePosted: new Date(new Date().getTime() - 40 * 24 * 60 * 60 * 1000),
 //   },
 // ];
+
 const HomePage = () => {
   return (
     <main className={`container`}>
