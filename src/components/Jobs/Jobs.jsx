@@ -71,7 +71,7 @@ const Jobs = () => {
     marginTop: "3rem",
   };
   return (
-    <section>
+    <section style={{ marginTop: "2rem" }}>
       <h2 style={headingStyle}>Recent Jobs</h2>
       <JobSearchOptions
         onSelectDate={setSelectedDate}

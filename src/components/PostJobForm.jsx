@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import createJob from "../hooks/createJob";
 import { useState } from "react";
-import useImageStorage from "../hooks/useImageStorage";
 
 const PostJobForm = () => {
   const [formData, setFormData] = useState({
@@ -11,21 +10,8 @@ const PostJobForm = () => {
     pay: "",
     description: "",
     type: "",
-    logo: null,
+    logo: "",
   });
-  const { imageURL, uploadImage } = useImageStorage();
-
-  const handleSubmitPicture = async (file) => {
-    try {
-      await uploadImage(file);
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        logo: file,
-      }));
-    } catch (error) {
-      console.error("Error uploading image:", error);
-    }
-  };
 
   const handleChange = (event) => {
     const { id, value } = event.target;
@@ -45,11 +31,14 @@ const PostJobForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
-      const { data, error } = await createJob(formData);
+      const { data, error } = await createJob(
+        formData,
+        event.target.logo.files[0]
+      );
 
       if (data) {
-        console.log("Job created:", data);
         setFormData({
           name: "",
           location: "",
@@ -68,7 +57,7 @@ const PostJobForm = () => {
   };
 
   return (
-    <>
+    <div className="new-div" style={{ with: "100%" }}>
       <h1
         style={{
           fontSize: "3rem",
@@ -82,12 +71,11 @@ const PostJobForm = () => {
         Job Posting 💼
       </h1>
       <br />
-      <div className="col-md-6 offset-md-3">
+      <div className="col-md-8 offset-md-2  ">
         <form
           onSubmit={handleSubmit}
           method="POST"
           noValidate
-          className="validated-form"
           encType="multipart/form-data"
         >
           <div className="mb-3">
@@ -95,7 +83,6 @@ const PostJobForm = () => {
               Company Name
             </label>
             <input
-              style={{ width: "670px" }}
               className="form-control"
               type="text"
               id="name"
@@ -111,7 +98,6 @@ const PostJobForm = () => {
               Company Location
             </label>
             <input
-              style={{ width: "670px" }}
               className="form-control"
               type="text"
               id="location"
@@ -127,7 +113,6 @@ const PostJobForm = () => {
               Job Position
             </label>
             <input
-              style={{ width: "670px" }}
               className="form-control"
               type="text"
               id="positionTitle"
@@ -160,7 +145,7 @@ const PostJobForm = () => {
             <div className="valid-feedback">Looks good!</div>
           </div>
 
-          <div className="mb-3">
+          <div className="mb-3 mt-3">
             <label className="form-label" htmlFor="description">
               Job Description
             </label>
@@ -176,7 +161,7 @@ const PostJobForm = () => {
             <div className="valid-feedback">Looks good!</div>
           </div>
 
-          <div className="form-group">
+          <div style={{ marginTop: "2rem", marginBottom: "2rem" }}>
             <label htmlFor="type">Select an Option:</label>
             <select
               className="form-control"
@@ -194,9 +179,10 @@ const PostJobForm = () => {
               style={{ width: "390px" }}
               type="file"
               className="form-file-input"
-              id="image"
-              name="image"
-              onChange={(event) => handleSubmitPicture(event.target.files[0])}
+              id="logo"
+              name="logo"
+              value={formData.logo}
+              onChange={handleChange}
             />
             <label className="form-file-label" htmlFor="image">
               <span className="form-file-text custom-file-label">
@@ -206,14 +192,14 @@ const PostJobForm = () => {
             </label>
           </div>
 
-          <div className="mb-3 mt-3">
-            <button className="btn btn-success " type="submit">
+          <div className="mb-3 mt-4 ">
+            <button className="btn custom-button" type="submit">
               Submit Job
             </button>
           </div>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

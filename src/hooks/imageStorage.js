@@ -1,8 +1,6 @@
-import { useState } from "react";
 import supabase from "../services/supabase";
 
-const useImageStorage = () => {
-    const [imageURL, setImageURL] = useState(null);
+const imageStorage = () => {
 
     const uploadImage = async (file) => {
         try {
@@ -16,8 +14,7 @@ const useImageStorage = () => {
             if (error) {
                 throw error;
             }
-
-            setImageURL(data.publicURL);
+            return data.path;
         } catch (error) {
             console.error("Error uploading image:", error);
             throw error;
@@ -25,9 +22,7 @@ const useImageStorage = () => {
     };
 
 
-
-    return { imageURL, uploadImage };
+    return { uploadImage };
 };
 
-export default useImageStorage;
-// https://gmgmormwkwwpyelqwrew.supabase.co/storage/v1/object/
+export default imageStorage;

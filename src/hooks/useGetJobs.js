@@ -20,5 +20,4 @@ function useGetJobs() {
     return jobs
 }
 
-// Exporting the function to be used to fetch data and store in a state in other components.
 export default useGetJobs;

@@ -1,45 +1,51 @@
-/* Styling for the container div */
 .div {
   display: flex;
-  justify-content: center;
+  gap: 1rem;
   align-items: center;
-  margin: 9px;
 }
-
+.search-bar {
+  width: 100%;
+}
 input[type="text"] {
-  width: 600px;
+  width: 100%;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 12px;
+  border-radius: 5px;
   outline: none;
 }
-
 select {
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 1rem;
+  border-radius: 6px;
   outline: none;
 }
-
 option {
   font-size: 16px;
 }
-
 button {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
 }
-
 button:hover {
   background-color: #0056b3;
 }
 #date-filter {
   width: 100px;
+}
+@media screen and (max-width: 612px) {
+  .div {
+    flex-wrap: wrap;
+    overflow-x: hidden;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
 }
