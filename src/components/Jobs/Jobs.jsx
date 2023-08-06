@@ -60,7 +60,7 @@ const Jobs = ({ demoJobs }) => {
   const filteredAndSorted = filterJobsByType(filteredByJobTitle);
 
   return (
-    <section>
+    <section style={{ marginTop: "2rem" }}>
       <h2>Recent Jobs</h2>
       <JobSearchOptions
         onSelectDate={setSelectedDate}
