@@ -22,7 +22,7 @@ import Hero from "../components/Hero/Hero";
 //     type: "Part-time",
 //     description:
 //       "Join Company 2 as a Graphic Designer and showcase your artistic talent! We are a creative-driven company that believes in the power of visual storytelling. As a Graphic Designer, you will work on various projects, from designing marketing materials to creating engaging website graphics. If you have an eye for detail and can bring ideas to life, don't miss this opportunity to be part of our team.",
-//     title: "Graphic Designer",
+//     title: " ",
 //     location: "Canada",
 //     pay: "4000",
 //     datePosted: new Date(new Date().getTime() - 10 * 24 * 60 * 60 * 1000),

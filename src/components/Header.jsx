@@ -22,20 +22,6 @@ const Header = () => {
           Home
         </Link>
         <Link
-          to="/"
-          className="btn btn-transparent"
-          style={{ color: "#7B95B7" }}
-        >
-          About Us
-        </Link>
-        <Link
-          to="/"
-          className="btn btn-transparent"
-          style={{ color: "#7B95B7" }}
-        >
-          Contact
-        </Link>
-        <Link
           to="post-job"
           style={{ backgroundColor: "#486284" }}
           className="btn btn-primary One"
