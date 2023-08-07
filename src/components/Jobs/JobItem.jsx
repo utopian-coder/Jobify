@@ -1,4 +1,4 @@
-import "./Jobitem.css";
+import "./JobItem.css";
 import moment from "moment";
 
 const JobItem = ({ jobDetails }) => {

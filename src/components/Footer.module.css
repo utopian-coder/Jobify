@@ -18,7 +18,6 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
-
   margin: 1rem 0;
 }
 
@@ -29,7 +28,6 @@
   font-size: var(--font-xl);
   border-radius: 50%;
   opacity: 0.5;
-
   color: var(--font-gray);
 }
 

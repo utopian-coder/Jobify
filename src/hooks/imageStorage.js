@@ -21,8 +21,8 @@ const imageStorage = () => {
         }
     };
 
-
     return { uploadImage };
 };
 
 export default imageStorage;
+

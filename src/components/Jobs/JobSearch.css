@@ -39,6 +39,7 @@ button:hover {
 #date-filter {
   width: 100px;
 }
+
 @media screen and (max-width: 612px) {
   .div {
     flex-wrap: wrap;

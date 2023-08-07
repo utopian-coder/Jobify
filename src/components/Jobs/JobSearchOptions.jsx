@@ -14,9 +14,9 @@ const JobSearchOptions = ({
     <div className="div">
       <div className="search-bar">
         <input
-          type="text"
-          placeholder="Search"
-          name="job"
+          type='text'
+          placeholder='Search'
+          name='job'
           onChange={handleSearchChange}
         />
       </div>
@@ -32,14 +32,14 @@ const DateFilter = ({ onSelectDate }) => {
   };
 
   return (
-    <div className="div">
-      <select id="date-filter" onChange={handleOptionChange} placeholder="Date">
-        <option value="any-date" className="date">
+    <div className='div'>
+      <select id='date-filter' onChange={handleOptionChange} placeholder='Date'>
+        <option value='any-date' className='date'>
           Date
         </option>
-        <option value="past-month">Past month</option>
-        <option value="past-week">Past week</option>
-        <option value="past-24-hours">Past 24 hours</option>
+        <option value='past-month'>Past month</option>
+        <option value='past-week'>Past week</option>
+        <option value='past-24-hours'>Past 24 hours</option>
       </select>
     </div>
   );
@@ -50,11 +50,11 @@ const CountryFilter = ({ onSelectCountry }) => {
   };
 
   return (
-    <div className="div">
+    <div className='div'>
       <select
-        id="country-filter"
+        id='country-filter'
         onChange={handleCountryChange}
-        placeholder="Country"
+        placeholder='Country'
       >
         <option value="any-country">Country</option>
         <option value="United States">USA</option>
@@ -73,11 +73,11 @@ const JobType = ({ onJobType }) => {
   };
 
   return (
-    <div className="job-type-filter">
-      <select id="job-type-filter" onChange={handleJobTypeChange}>
-        <option value="any-time">Job Type</option>
-        <option value="Full-time">Full Time</option>
-        <option value="Part-time">Part Time</option>
+    <div className='job-type-filter'>
+      <select id='job-type-filter' onChange={handleJobTypeChange}>
+        <option value='any-time'>Job Type</option>
+        <option value='Full-time'>Full Time</option>
+        <option value='Part-time'>Part Time</option>
       </select>
     </div>
   );

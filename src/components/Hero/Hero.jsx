@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import heroImage from "../../assets/heroImage.jpg";
 import classes from "./Hero.module.css";
+
 const headingStyle = {
   fontSize: "3.2rem",
   fontWeight: "bold",
   color: "#486284",
 };
+
 const Hero = () => {
   return (
     <section className={`${classes.hero}`}>
