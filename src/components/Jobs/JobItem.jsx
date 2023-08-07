@@ -1,5 +1,4 @@
 import "./JobItem.css";
-
 import moment from "moment";
 
 const JobItem = ({ jobDetails }) => {
@@ -24,7 +23,6 @@ const JobItem = ({ jobDetails }) => {
       <hr />
       <div className="job-info">
         <div className="job-title">{jobDetails.positionTitle}</div>
-
         <div className="job-location">📍 {jobDetails.location}</div>
         <div className="job-pay">💲{jobDetails.pay} month</div>
         <div className="job-type">⌛ {jobDetails.type}</div>
@@ -32,5 +30,4 @@ const JobItem = ({ jobDetails }) => {
     </article>
   );
 };
-
 export default JobItem;

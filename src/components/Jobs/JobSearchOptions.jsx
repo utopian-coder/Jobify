@@ -26,7 +26,6 @@ const JobSearchOptions = ({
     </div>
   );
 };
-
 const DateFilter = ({ onSelectDate }) => {
   const handleOptionChange = (event) => {
     onSelectDate(event.target.value);
@@ -45,7 +44,6 @@ const DateFilter = ({ onSelectDate }) => {
     </div>
   );
 };
-
 const CountryFilter = ({ onSelectCountry }) => {
   const handleCountryChange = (event) => {
     onSelectCountry(event.target.value);

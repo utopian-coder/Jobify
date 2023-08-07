@@ -19,3 +19,4 @@ JobHub is a platform that connects job seekers with job opportunities by allowin
 ## Live Link
 
 Check out the live Jobify from here: [JobHub Live Link](https://google.com)
+
