@@ -21,9 +21,8 @@ const imageStorage = () => {
         }
     };
 
-
-    return {uploadImage };
+    return { uploadImage };
 };
 
 export default imageStorage;
-// https://gmgmormwkwwpyelqwrew.supabase.co/storage/v1/object/
+

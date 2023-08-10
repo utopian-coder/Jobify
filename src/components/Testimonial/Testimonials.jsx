@@ -31,7 +31,7 @@ const TESTIMONIALS = [
 
 const Testimonials = () => {
   const headingStyle = {
-    marginTop: "8rem",
+    marginTop: "4rem",
     fontSize: "3rem",
     fontWeight: "bold",
     color: "#486284",
@@ -41,6 +41,7 @@ const Testimonials = () => {
 
   return (
     <section id="tesi">
+      <hr />
       <h2 style={headingStyle}>What Our Customers Say</h2>
       <div className={`flex-col ${classes.testimonials}`}>
         {TESTIMONIALS.map((testimonial) => (
