@@ -1,6 +1,6 @@
 # Jobify 🧑🏽‍💻
 
-JobHub is a platform that connects job seekers with job opportunities by allowing users to post and apply for jobs. The website is built using ReactJS, CSS Modules, Bootstrap, and Supabase for backend services. This repository contains all the code and resources necessary to run the Jobify website.
+Jobify is a platform that connects job seekers with job opportunities by allowing users to post and apply for jobs. The website is built using ReactJS, CSS Modules, Bootstrap, and Supabase for backend services. This repository contains all the code and resources necessary to run the Jobify website.
 
 ## Features 🚀
 
@@ -18,5 +18,5 @@ JobHub is a platform that connects job seekers with job opportunities by allowin
 
 ## Live Link
 
-Check out the live Jobify from here: [Live Link](https://jobify-three-delta.vercel.app/)
+Check out the live Jobify from here - [Live Link](https://jobify-three-delta.vercel.app/)
 
