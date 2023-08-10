@@ -1,0 +1,22 @@
+.form {
+  width: 100%;
+  margin: 0;
+}
+
+.form-container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #486284;
+  margin-block: 2rem 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .form-container {
+    margin-inline: auto;
+  }
+
+  .form-container h1 {
+    margin-block: 4rem 2.5rem;
+    font-size: 3rem;
+  }
+}

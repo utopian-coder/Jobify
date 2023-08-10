@@ -34,6 +34,10 @@
   --transition: all 400ms ease;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -145,10 +149,4 @@ img {
   height: 100%;
   background-color: #415064;
   border-radius: 12px;
-}
-@media screen and (max-width: 777px) {
-  .new-div {
-    width: 80%;
-    margin: auto;
-  }
 }
