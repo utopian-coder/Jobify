@@ -90,3 +90,18 @@ hr {
 .company-logo-name {
   display: flex;
 }
+
+@media screen and (max-width: 500px) {
+  .company-info {
+    display: initial;
+  }
+
+  .job-date {
+    all: initial;
+    color: #8d8c8c;
+  }
+
+  .company-logo-name {
+    margin-bottom: 1rem;
+  }
+}

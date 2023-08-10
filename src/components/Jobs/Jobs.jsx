@@ -79,9 +79,10 @@ const Jobs = () => {
         onJobType={setJobType}
         onsetSearchInput={setSearchInput}
       />
-      {filteredAndSorted.map((job) => (
-        <JobItem key={job.id} jobDetails={job} />
-      ))}
+      {filteredAndSorted.length > 0 &&
+        filteredAndSorted.map((job) => (
+          <JobItem key={job.id} jobDetails={job} />
+        ))}
     </section>
   );
 };
